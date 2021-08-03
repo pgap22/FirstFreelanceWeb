@@ -1,0 +1,263 @@
+/*
+88ccf1-c1dff0-3587a4-2d848a-2d898b
+*/
+
+:root{
+    --blanco: white;
+    --negro: black;
+    --primario: #88ccf1;
+    --secundario: #c1dff0;
+    --tercero: #3587a4;
+    --cuarto: #2d848a;
+    --quinto: #2d898b;
+    
+
+}
+html{
+    font-size: 62.6%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+body{
+    background-image: linear-gradient(to top,var(--secundario) 20%,var(--blanco) 80%);
+    font-family: Roboto Mono,'sans-serif';
+    font-size: 16px;
+}
+.titulo span{
+    font-size: 2rem;
+    color: black;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0rem auto;
+
+}
+.contenedor main{
+    margin:0rem 5rem;
+}
+@media (min-width: 768px) {
+    .contenedor main{
+        max-width: 120rem;
+        margin: 0rem auto;
+    }
+}
+
+.navegacionPrincipal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem; 
+}
+.navegacionPrincipal a:hover{
+    background-color: var(--primario);
+    color: black;
+    
+}
+
+.navegacionPrincipal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+   .navegacionPrincipal{
+       flex-direction: row;
+       justify-content: space-between;
+
+   }
+}
+
+.nav-bg{
+    background-color: var(--tercero);
+}
+.hero{
+    
+    background-image: url(https://orientacion.universia.net.co/imgs2011/imagenes/diseno-sin-2020_09_17_134034@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+    
+}
+.contenido-hero{
+position: absolute;
+background-color: rgba(0,0,0,0.5);
+/**bottom: 0%;
+top: 0%;
+left: 0%;
+right: 0;
+**/
+width: 100%;
+height: 100%;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.contenido-hero h2,.contenido-hero p{
+color:white;
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+.boton{
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(0, 0, 0), rgb(0, 0, 0));
+    border-image: initial;
+    text-align: ce;
+    background-color: var(--primario);
+    color: white;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    border-color: var(--primario);
+    text-decoration: none;
+    width: 90%;
+    
+}
+.boton:active{
+    border-style: ridge;
+    color: var(--cuarto);
+}
+@media (min-width: 768px) {
+   .boton{
+       width: auto;
+   }
+}
+
+.flex{
+    display: flex;
+}
+.alinearDerecha{
+    justify-content: flex-end;
+}
+.w-100{
+    width: 100%;
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 12px 46px -5px rgba(0,0,0,0.78);
+    -moz-box-shadow: 0px 12px 46px -5px rgba(0,0,0,0.78);
+    box-shadow: 0px 12px 46px -5px rgba(0,0,0,0.78);
+    background-color: var(--tercero);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+    }
+}
+/*
+.servicios, .navegacionPrincipal, form{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+*/
+.servicio-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio-img h3{
+    color: white;
+    font-weight: normal;
+}
+.servicio-img p{
+    line-height: 2rem;
+}
+.servicio-img .iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    height: 200%;
+    background-color: var(--secundario);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.form fieldset{
+    border: none;
+}
+.form legend{
+    color: var(--quinto);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto auto;
+        column-gap: 2rem;
+    } 
+    .campo:nth-child(3), .campo:nth-child(4){
+        grid-column: 1/3;
+
+    }
+
+}
+
+
+.campo textarea{
+    height: 25rem;
+    resize: vertical;
+    transition:ease-out 0.3s;
+
+
+}
+.campo label{
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    height: 5rem;
+}
+.boton:hover{
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+}
